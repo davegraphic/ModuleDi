@@ -17,7 +17,7 @@ steps:
   inputs:
     command: build
     projects: '**/Dang.ModuleDi.csproj'
-    arguments: '--configuration Release' # Update this to match your need
+    arguments: '--configuration Release'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
