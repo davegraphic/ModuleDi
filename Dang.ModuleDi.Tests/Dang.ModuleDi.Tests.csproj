@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Dang.ModuleDi\Dang.ModuleDi\Dang.ModuleDi.csproj" />
+    <ProjectReference Include="..\Dang.ModuleDi\Dang.ModuleDi.csproj" />
   </ItemGroup>
 
 </Project>
