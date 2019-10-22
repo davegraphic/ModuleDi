@@ -16,7 +16,7 @@ steps:
   displayName: Build
   inputs:
     command: build
-    projects: '**/*.csproj'
+    projects: '**/Dang.ModuleDi.csproj'
     arguments: '--configuration Release' # Update this to match your need
 
 - script: |
