@@ -15,7 +15,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: '''**/*.csproj'''
+    projects: '''**/Dang.ModuleDi.csproj'''
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
