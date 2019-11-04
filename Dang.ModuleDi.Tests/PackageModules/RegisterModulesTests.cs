@@ -42,7 +42,7 @@ namespace Dang.ModuleDi.Tests.PackageModules
         public void AddModules_Should_Throw_If_PackageModule_Collection_Is_Null()
         {
             Assert.ThrowsException<ArgumentNullException>(() =>
-                RegisterModules.AddModules(null));
+                RegisterModules.AddModule(null));
         }
 
         [TestMethod]
