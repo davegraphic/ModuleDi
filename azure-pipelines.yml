@@ -18,7 +18,20 @@ steps:
     command: build
     projects: '**/Dang.ModuleDi.csproj'
     arguments: '--configuration Release'
+- task: NuGetCommand@2
+  inputs:
+    command: 'pack'
+    vstsFeed: '8987b675-c3f0-443a-ab36-4b82ffd03836'
+    packagesToPack: '**/Dang.ModuleDi.csproj'
+    versioningScheme: 'off'
 
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '8987b675-c3f0-443a-ab36-4b82ffd03836'
+  
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
